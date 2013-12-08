@@ -1,0 +1,162 @@
+\documentclass[a4paper, 12pt]{article} % Font size (can be 10pt, 11pt or 12pt) and paper size (remove a4paper for US letter paper)
+\usepackage{amsmath,amsfonts,bm}
+\usepackage{hyperref,verbatim}
+\usepackage{amsthm,epigraph} 
+\usepackage{amssymb}
+\usepackage{framed,mdframed}
+\usepackage{graphicx,color} 
+\usepackage{mathrsfs,xcolor} 
+\usepackage[all]{xy}
+\usepackage{fancybox} 
+% \usepackage{xeCJK}
+\usepackage{CJKutf8}
+\newtheorem*{adtheorem}{定理}
+% \setCJKmainfont[BoldFont=FZYaoTi,ItalicFont=FZYaoTi]{FZYaoTi}
+\definecolor{shadecolor}{rgb}{1.0,0.9,0.9} %背景色为浅红色
+\newenvironment{theorem}
+{\bigskip\begin{mdframed}[backgroundcolor=gray!40,rightline=false,leftline=false,topline=false,bottomline=false]\begin{adtheorem}}
+    {\end{adtheorem}\end{mdframed}\bigskip}
+\newtheorem*{bdtheorem}{定义}
+\newenvironment{definition}
+{\bigskip\begin{mdframed}[backgroundcolor=gray!40,rightline=false,leftline=false,topline=false,bottomline=false]\begin{bdtheorem}}
+    {\end{bdtheorem}\end{mdframed}\bigskip}
+\newtheorem*{cdtheorem}{习题}
+\newenvironment{exercise}
+{\bigskip\begin{mdframed}[backgroundcolor=gray!40,rightline=false,leftline=false,topline=false,bottomline=false]\begin{cdtheorem}}
+    {\end{cdtheorem}\end{mdframed}\bigskip}
+\newtheorem*{ddtheorem}{注}
+\newenvironment{remark}
+{\bigskip\begin{mdframed}[backgroundcolor=gray!40,rightline=false,leftline=false,topline=false,bottomline=false]\begin{ddtheorem}}
+    {\end{ddtheorem}\end{mdframed}\bigskip}
+\newtheorem*{edtheorem}{引理}
+\newenvironment{lemma}
+{\bigskip\begin{mdframed}[backgroundcolor=gray!40,rightline=false,leftline=false,topline=false,bottomline=false]\begin{edtheorem}}
+    {\end{edtheorem}\end{mdframed}\bigskip}
+\newtheorem*{pdtheorem}{例}
+\newenvironment{example}
+{\bigskip\begin{mdframed}[backgroundcolor=gray!40,rightline=false,leftline=false,topline=false,bottomline=false]\begin{pdtheorem}}
+    {\end{pdtheorem}\end{mdframed}\bigskip}
+
+\usepackage[protrusion=true,expansion=true]{microtype} % Better typography
+\usepackage{wrapfig} % Allows in-line images
+\usepackage{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Required for accented characters
+\linespread{1.05} % Change line spacing here, Palatino benefits from a slight increase by default
+
+\makeatletter
+\renewcommand\@biblabel[1]{\textbf{#1.}} % Change the square brackets for each bibliography item from '[1]' to '1.'
+\renewcommand{\@listI}{\itemsep=0pt} % Reduce the space between items in the itemize and enumerate environments and the bibliography
+
+\renewcommand{\maketitle}{ % Customize the title - do not edit title
+  % and author name here, see the TITLE block
+  % below
+  \renewcommand\refname{参考文献}
+  \newcommand{\D}{\displaystyle}\newcommand{\ri}{\Rightarrow}
+  \newcommand{\ds}{\displaystyle} \renewcommand{\ni}{\noindent}
+  \newcommand{\pa}{\partial} \newcommand{\Om}{\Omega}
+  \newcommand{\om}{\omega} \newcommand{\sik}{\sum_{i=1}^k}
+  \newcommand{\vov}{\Vert\omega\Vert} \newcommand{\Umy}{U_{\mu_i,y^i}}
+  \newcommand{\lamns}{\lambda_n^{^{\scriptstyle\sigma}}}
+  \newcommand{\chiomn}{\chi_{_{\Omega_n}}}
+  \newcommand{\ullim}{\underline{\lim}} \newcommand{\bsy}{\boldsymbol}
+  \newcommand{\mvb}{\mathversion{bold}} \newcommand{\la}{\lambda}
+  \newcommand{\La}{\Lambda} \newcommand{\va}{\varepsilon}
+  \newcommand{\be}{\beta} \newcommand{\al}{\alpha}
+  \newcommand{\dis}{\displaystyle} \newcommand{\R}{{\mathbb R}}
+  \newcommand{\N}{{\mathbb N}} \newcommand{\cF}{{\mathcal F}}
+  \newcommand{\gB}{{\mathfrak B}} \newcommand{\eps}{\epsilon}
+  \begin{flushright} % Right align
+    {\LARGE\@title} % Increase the font size of the title
+    
+    \vspace{50pt} % Some vertical space between the title and author name
+    
+    {\large\@author} % Author name
+    \\\@date % Date
+    
+    \vspace{40pt} % Some vertical space between the author block and abstract
+  \end{flushright}
+}
+
+% ----------------------------------------------------------------------------------------
+%	TITLE
+% ----------------------------------------------------------------------------------------
+\begin{document}
+\begin{CJK}{UTF8}{gkai}
+  \title{\textbf{习题12.49}} 
+  % \setlength\epigraphwidth{0.7\linewidth}
+  \author{\small{叶卢庆}\\{\small{杭州师范大学理学院,学号:1002011005}}\\{\small{Email:h5411167@gmail.com}}} % Institution
+  \renewcommand{\today}{\number\year. \number\month. \number\day}
+  \date{\today} % Date
+  
+  % ----------------------------------------------------------------------------------------
+  
+  
+  \maketitle % Print the title section
+  
+  % ----------------------------------------------------------------------------------------
+  %	ABSTRACT AND KEYWORDS
+  % ----------------------------------------------------------------------------------------
+  
+  % \renewcommand{\abstractname}{摘要} % Uncomment to change the name of the abstract to something else
+  
+  % \begin{abstract}
+  
+  % \end{abstract}
+  
+  % \hspace*{3,6mm}\textit{关键词:}  % Keywords
+  
+  % \vspace{30pt} % Some vertical space between the abstract and first section
+  
+  % ----------------------------------------------------------------------------------------
+  %	ESSAY BODY
+  % ----------------------------------------------------------------------------------------
+  \begin{exercise}[12.49]
+求上方由球面 $x^2+y^2+z^2=8$,下方是平面 $z=2$ 所围区域的体积.分别用柱
+坐标和球坐标算.    
+  \end{exercise}
+  \begin{proof}[用柱坐标算]
+我们先用直角坐标表示出该区域的体积:
+$$
+\int_2^{2 \sqrt{2}}\int_{-\sqrt{8-z^2}}^{\sqrt{8-z^2}}\int_{-\sqrt{8-z^2-x^2}}^{\sqrt{8-z^2-x^2}}dydxdz.
+$$
+然后进行柱坐标代换,令 $z=z$,$x=r\cos\theta,y=r\sin\theta$.得到 Jacobi
+行列式
+\begin{align*}
+  \begin{vmatrix}
+    \frac{\pa x}{\pa r}&\frac{\pa x}{\pa \theta}&\frac{\pa x}{\pa z}\\
+    \frac{\pa y}{\pa r}&\frac{\pa y}{\pa \theta}&\frac{\pa y}{\pa z}\\
+    \frac{\pa z}{\pa r}&\frac{\pa z}{\pa \theta}&\frac{\pa z}{\pa z}\\
+  \end{vmatrix}=\begin{vmatrix}
+    \cos\theta&-r\sin\theta&0\\
+\sin\theta&r\cos\theta&0\\
+0&0&1\\
+  \end{vmatrix}=r.
+\end{align*}
+\begin{remark}
+  为什么 $\frac{\pa z}{\pa r}=0$?这是因为 $z$ 是一个函数
+  $z(r,\theta,z)$,当 $\theta,z$ 固定时,$r$ 的改变不影响 $z$.
+\end{remark}
+上述积分可以变为
+$$
+\int_2^{2 \sqrt{2}}\int_0^{\sqrt{8-z^2}}\int_0^{2\pi}r d\theta dr
+dz=\frac{8}{3}(4 \sqrt{2}-5).
+$$
+  \end{proof}
+  \begin{proof}[用球坐标算]
+把上述直角坐标中的积分变为
+$$
+\int_0^{2\pi}\int_{0}^{\frac{\pi}{4}}\int_{\frac{2}{\cos\phi}}^{2 \sqrt{2}}\rho^2\sin\phi
+d\rho d\phi d\theta=\frac{8}{3}(4 \sqrt{2}-5).
+$$
+  \end{proof}
+  % ----------------------------------------------------------------------------------------
+  %	BIBLIOGRAPHY
+  % ----------------------------------------------------------------------------------------
+  
+  \bibliographystyle{unsrt}
+  
+  \bibliography{sample}
+  
+  % ----------------------------------------------------------------------------------------
+\end{CJK}
+\end{document}
